@@ -1,5 +1,7 @@
 
-
+var userInput;
+var humanScore = 0;
+var computerScore = 0;
 
 function getComputerChoice(){
     var value = (Math.random()*3);
@@ -22,7 +24,7 @@ function getComputerChoice(){
 getComputerChoice();
 
 function getHumanChoice() {
-    var userInput = prompt("Rock, paper or scissors?");
+    userInput = prompt("Rock, paper or scissors?");
     userInput = userInput.toLowerCase();
     
     while ((userInput != "rock") && (userInput != "paper") && (userInput != "scissors")) {
