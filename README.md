@@ -10,3 +10,20 @@ ended up using while loop
 Step 4:
 initialize humanScore and computerScore variable
 
+Step 5:
+playRound function-
+if player and computer same choice return draw message
+if player win
+that is player = scissors   computer = paper
+        player = rock       computer = scissors
+        player = paper      computer = rock
+add 1 to player score
+if computer win
+that is player = scissors   computer = rock
+        player = rock       computer = paper
+        player = paper      computer = scissors
+add 1 to computer score
+
+Step 6:
+5 rounds
+initialize counter and plus one counter after each game
