@@ -1,7 +1,6 @@
 
 
-var humanScore = 0;
-var computerScore = 0;
+
 
 function getComputerChoice(){
     var value = (Math.random()*3);
@@ -30,31 +29,42 @@ function getHumanChoice() {
     return userInput;
 }
 
-function playRound(humanChoice, computerChoice){
-    if (
-        (humanChoice == "scissors" && computerChoice == "paper") ||
-        (humanChoice == "rock" && computerChoice == "scissors") ||
-        (humanChoice == "paper" && computerChoice == "rock")
-    )
-        {
-            humanScore += 1;
-            console.log("You win!");
-        }
-    else if (
-        (humanChoice == "scissors" && computerChoice == "rock") ||
-        (humanChoice == "rock" && computerChoice == "paper") ||
-        (humanChoice == "paper" && computerChoice == "scissors")
-    )
-        {
-            computerScore += 1;
-            console.log("You lose!");
-        }
 
-    else {
-        console.log("Draw, next round!");
-    }  
+
+
+// playRound(getHumanChoce(),getComputerChoice());
+function playGame(){
+    var humanScore = 0;
+    var computerScore = 0;
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+    playRound(getHumanChoice(),getComputerChoice());
+    console.log("Final scores - You: " + humanScore + " Computer: " + computerScore);
+    function playRound(humanChoice, computerChoice){
+        if (
+            (humanChoice == "scissors" && computerChoice == "paper") ||
+            (humanChoice == "rock" && computerChoice == "scissors") ||
+            (humanChoice == "paper" && computerChoice == "rock")
+        )
+            {
+                humanScore += 1;
+                console.log("You win!");
+            }
+        else if (
+            (humanChoice == "scissors" && computerChoice == "rock") ||
+            (humanChoice == "rock" && computerChoice == "paper") ||
+            (humanChoice == "paper" && computerChoice == "scissors")
+        )
+            {
+                computerScore += 1;
+                console.log("You lose!");
+            }
+    
+        else {
+            console.log("Draw, next round!");
+        }  
+    }
 }
-
-
-// playRound(getHumanChoice(),getComputerChoice());
-
+playGame();

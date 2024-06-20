@@ -27,3 +27,9 @@ add 1 to computer score
 Step 6:
 5 rounds
 initialize counter and plus one counter after each game
+
+last step:
+put playRound into new playGame function
+put scores into playGame function
+repeat playRound 5 times in playGame function
+console output final score.
