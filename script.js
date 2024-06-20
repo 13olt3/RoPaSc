@@ -20,3 +20,14 @@ function getComputerChoice(){
 }
 
 getComputerChoice();
+
+function getHumanChoice() {
+    var userInput = prompt("Rock, paper or scissors?");
+    userInput = userInput.toLowerCase();
+    
+    while ((userInput != "rock") && (userInput != "paper") && (userInput != "scissors")) {
+        userInput = prompt("Invalid input, try again. Rock, paper or scissors?");
+        userInput = userInput.toLowerCase();       
+    }
+
+}
