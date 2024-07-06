@@ -71,8 +71,22 @@ function playRound(humanChoice, computerChoice){
         resultText.textContent = "Draw. Next Round!";
         results.appendChild(resultText);
     }  
+    if( (humanScore != 5) && (computerScore != 5)) {
+    runningScore.textContent = "Your score (" + humanScore + " - " + computerScore + ") computer score.";
+    results.appendChild(runningScore);
+    }
+    else if (humanScore == 5){
+        runningScore.textContent = "Your score (" + humanScore + " - " + computerScore + ") computer score. YOU WIN!";
+        results.appendChild(runningScore);
+    }
+    else if (computerScore ==5){
+        runningScore.textContent = "Your score (" + humanScore + " - " + computerScore + ") computer score. YOU LOSE!";
+        results.appendChild(runningScore);
+    }
+    
 }
 
 const results = document.querySelector("#results");
 const resultText = document.createElement("div");
+const runningScore = document.createElement("div");
 

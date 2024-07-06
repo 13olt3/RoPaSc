@@ -39,3 +39,8 @@ Change console elements into DOM elements
 Create dom element to put text content into
 query select dom element so it can be acessed in playRound function
 change the console elements to textContent elements
+
+Use if statement to continue game
+if neither score is 5, just show score
+if one score is 5, say add that that player is winner
+When either score reaches 5 add text content that announces winner
