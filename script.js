@@ -1,7 +1,3 @@
-
-
-
-
 function getComputerChoice(){
     var value = (Math.random()*3);
     var choice;
@@ -30,41 +26,50 @@ function getHumanChoice() {
 }
 
 
+// function playGame(){
 
+//     console.log("Final scores - You: " + humanScore + " Computer: " + computerScore);
+// }
 
-// playRound(getHumanChoce(),getComputerChoice());
-function playGame(){
-    var humanScore = 0;
-    var computerScore = 0;
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    console.log("Final scores - You: " + humanScore + " Computer: " + computerScore);
-    function playRound(humanChoice, computerChoice){
-        if (
-            (humanChoice == "scissors" && computerChoice == "paper") ||
-            (humanChoice == "rock" && computerChoice == "scissors") ||
-            (humanChoice == "paper" && computerChoice == "rock")
-        )
-            {
-                humanScore += 1;
-                console.log("You win!");
-            }
-        else if (
-            (humanChoice == "scissors" && computerChoice == "rock") ||
-            (humanChoice == "rock" && computerChoice == "paper") ||
-            (humanChoice == "paper" && computerChoice == "scissors")
-        )
-            {
-                computerScore += 1;
-                console.log("You lose!");
-            }
-    
-        else {
-            console.log("Draw, next round!");
-        }  
-    }
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", function() {
+    playRound("rock",getComputerChoice());
+});
+paper.addEventListener("click", function() {
+    playRound("paper",getComputerChoice());
+});
+scissors.addEventListener("click", function() {
+    playRound("scissors",getComputerChoice());
+});
+
+var humanScore = 0;
+var computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
+    if (
+        (humanChoice == "scissors" && computerChoice == "paper") ||
+        (humanChoice == "rock" && computerChoice == "scissors") ||
+        (humanChoice == "paper" && computerChoice == "rock")
+    )
+        {
+            humanScore += 1;
+            console.log("You win!");
+        }
+    else if (
+        (humanChoice == "scissors" && computerChoice == "rock") ||
+        (humanChoice == "rock" && computerChoice == "paper") ||
+        (humanChoice == "paper" && computerChoice == "scissors")
+    )
+        {
+            computerScore += 1;
+            console.log("You lose!");
+        }
+
+    else {
+        console.log("Draw, next round!");
+    }  
 }
-playGame();
+
