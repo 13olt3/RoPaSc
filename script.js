@@ -25,9 +25,6 @@ function getHumanChoice() {
     return userInput;
 }
 
-
-// function playGame(){
-
 //     console.log("Final scores - You: " + humanScore + " Computer: " + computerScore);
 // }
 
@@ -56,7 +53,8 @@ function playRound(humanChoice, computerChoice){
     )
         {
             humanScore += 1;
-            console.log("You win!");
+            resultText.textContent = "You win!";
+            results.appendChild(resultText);
         }
     else if (
         (humanChoice == "scissors" && computerChoice == "rock") ||
@@ -65,11 +63,16 @@ function playRound(humanChoice, computerChoice){
     )
         {
             computerScore += 1;
-            console.log("You lose!");
+            resultText.textContent = "You lose!";
+            results.appendChild(resultText);
         }
 
     else {
-        console.log("Draw, next round!");
+        resultText.textContent = "Draw. Next Round!";
+        results.appendChild(resultText);
     }  
 }
+
+const results = document.querySelector("#results");
+const resultText = document.createElement("div");
 

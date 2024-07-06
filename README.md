@@ -35,3 +35,7 @@ repeat playRound 5 times in playGame function
 console output final score.
 
 
+Change console elements into DOM elements
+Create dom element to put text content into
+query select dom element so it can be acessed in playRound function
+change the console elements to textContent elements
